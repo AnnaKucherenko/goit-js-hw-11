@@ -1,4 +1,3 @@
-// import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import Notiflix from 'notiflix';
 import './css/styles.css';
 import  { fetchImages }  from './api/fetchImg';
@@ -8,9 +7,7 @@ import {renderCardImg} from './render-card-img'
 const refs = getRefs();
 let page = 1;
 
-
 refs.formEl.addEventListener('submit', onSearchFormSubmit);
-
 
 async function onSearchFormSubmit(evt) {
     try {
@@ -26,6 +23,7 @@ async function onSearchFormSubmit(evt) {
             clearImgList();
             Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
         }
+        Notiflix.Notify.success(`Hooray! We found ${images.totalHits} images.`);
         renderImgList(images);
         refs.btnLoadMore.classList.add("is-activ")
 

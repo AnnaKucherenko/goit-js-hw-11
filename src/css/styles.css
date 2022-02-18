@@ -15,11 +15,14 @@ body {
 .conteiner-form {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: blue;
+  background-color: rgb(147, 147, 179);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .search-form input[type='text'] {
@@ -54,6 +57,7 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 100px;
 }
 
 img {
