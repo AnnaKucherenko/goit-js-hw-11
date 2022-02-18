@@ -90,4 +90,9 @@ img {
   justify-content: center;
   color: white;
   border-radius: 6px;
+  opacity: 0;
+}
+
+.is-activ {
+  opacity: 1;
 }

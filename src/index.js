@@ -16,6 +16,7 @@ async function onSearchFormSubmit(evt) {
     try {
         evt.preventDefault();
         clearImgList();
+        refs.btnLoadMore.classList.remove("is-activ")
         if (refs.inputEl.value.trim() === '') {
             clearImgList();
             return
@@ -26,6 +27,8 @@ async function onSearchFormSubmit(evt) {
             Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
         }
         renderImgList(images);
+        refs.btnLoadMore.classList.add("is-activ")
+
     } catch (error) { console.log(error) }
 }
 

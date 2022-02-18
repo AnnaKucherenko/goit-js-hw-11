@@ -20,7 +20,7 @@ export function fetchImages(searchQuery, page) {
 //       if (!response.ok) {
 //         throw new Error(response.status);
 //       }
-//       return response.json();
+//       return response.data.json();
 //     }
 //   );
 // }
